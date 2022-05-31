@@ -1,0 +1,25 @@
+sta treba promeniti ili ubaciti:
+
+- registration.php - sve greske prikazivati ispod polja za unos ako ako je greska na tom polju i prikazivati iz niza array, ili odraditi ajaxom pa pored cekirati ok ili error.... (bolja obrada greski):
+
+if($email =='' {
+    $error['email'] = 'email cannot be empty';
+}
+if(email_exists($email) {
+    $error['email'] = 'email already exists, <a href="index.php">Please login</a>';
+}
+foreach ($error as $key => $value){
+    if(empty($value)){
+        unset($error['$key'];
+    }
+}
+if(empty($error)){
+    register_user($username, $email, $password);
+    login_user($username, $password);
+}
+
+- na kategorijama ako obrises kategoriju i vest ne pripada ni jednoj kategoriji onda da odradi update svih vesti koje su pripale toj kategoriji da se changuje da pripadaju kategoriji Uncategorized, i dugme na koje mogu da se obrisu sve vesti koje ne pripadaju ni jednoj kategoriji
+
+- na paginaciji mogu da upisem reci ili stranu koja ne postoji, napravi zastitu za to
+
+- napraviti paginaciju u admin/posts switch default (view_all_posts) da se vide tipa 20 ili 30 ili 50 postova na 1 strani....

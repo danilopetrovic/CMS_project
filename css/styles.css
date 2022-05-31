@@ -1,0 +1,5 @@
+.pager li .active_link {
+    background: rgba(0, 0, 255, 0.1);
+    /*border: 1px solid blue;*/
+    font-weight: bold;
+}
